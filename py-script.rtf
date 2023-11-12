@@ -30,10 +30,10 @@
 			<button type=\'93button\'94 id=\'93submit\'94> Check Guess</button>\
 			<label for=\'93result\'94>Result:</label><div name=\'93result\'94 id=\'93result\'94></div>\
 		<f/form>\
-	<py-script>\
-		from pyscript import when\
-		@when(\'93click\'94, selector=\'93#submit\'94)\
-		def check_guess ():\
+		<py-script>\
+			from pyscript import when\
+			@when(\'93click\'94, selector=\'93#submit\'94)\
+			def check_guess ():\
 			user_guess = int(Element(\'93guess\'94).value)\
 			result = Element(\'93result\'94)\
 			if user_guess == selection:\
@@ -42,4 +42,6 @@
 				result.write(\'93Try again! Your guess was too high.\'94)\
 			else:\
 				result.write(\'93Try again! Your guess was too low.\'94)\
-	</py-script>}
+		</py-script>}
+	</body>
+</html>
